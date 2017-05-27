@@ -1,0 +1,43 @@
+aside{
+	background-color: red;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 180px;
+	left: 0;
+}
+section{
+	background-color: green;
+	margin-left: 180px;
+	padding: 20px;
+}
+
+aside h1{
+	text-align: center;
+	color: #000;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 20px 0;
+}
+section h1{
+	color: #000;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0 0 20px;
+	position: fixed;
+	top: 20px;
+}
+.profile{
+	text-align: center;	
+	margin: .5em 0;	
+}
+.profile img, .profile-batch img{
+	max-width: 100px;
+	margin: 0 auto;
+	border: 1px solid rgba(0,0,0,.5);
+	padding: .5em;
+	margin: .5em;
+}
+.row{
+	margin: 0;
+	padding: 0;
+}
