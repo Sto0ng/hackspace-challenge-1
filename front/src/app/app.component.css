@@ -1,37 +1,42 @@
 aside{
-	background-color: red;
+	background-color: #1abc9c;
 	position: fixed;
 	top: 0;
 	bottom: 0;
 	width: 180px;
 	left: 0;
 }
-section{
-	background-color: green;
+nav{
+	position: fixed;
 	margin-left: 180px;
-	padding: 20px;
+	left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #fff;
+}
+section{
+	margin-left: 180px;
+	padding: 70px 20px 30px;
 }
 
-aside h1{
+aside h2{
 	text-align: center;
 	color: #000;
 	font-family: 'Montserrat', sans-serif;
 	margin: 0;
 	padding: 20px 0;
 }
-section h1{
+nav h2{
 	color: #000;
 	font-family: 'Montserrat', sans-serif;
-	padding: 0 0 20px;
-	position: fixed;
-	top: 20px;
+	padding: 0 20px;
 }
 .profile{
 	text-align: center;	
 	margin: .5em 0;	
 }
 .profile img, .profile-batch img{
-	max-width: 100px;
+	max-width: 95px;
 	margin: 0 auto;
 	border: 1px solid rgba(0,0,0,.5);
 	padding: .5em;
