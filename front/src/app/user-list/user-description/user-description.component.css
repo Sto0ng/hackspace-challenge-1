@@ -1,0 +1,110 @@
+aside{
+	background-color: #1abc9c;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 180px;
+	left: 0;
+}
+nav{
+	position: fixed;
+	margin-left: 180px;
+	left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #fff;
+}
+section{
+	margin-left: 180px;
+	padding: 70px 20px 30px;
+}
+
+aside h2{
+	text-align: center;
+	color: #000;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 20px 0;
+}
+nav h2{
+	color: #000;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0 20px;
+}
+.profile{
+	text-align: center;	
+	margin: .5em 0;	
+}
+.profile img, .profile-batch img{
+	max-width: 95px;
+	margin: 0 auto;
+	border: 1px solid rgba(0,0,0,.5);
+	padding: .5em;
+	margin: .5em;
+}
+.row{
+	margin: 0;
+	padding: 0;
+}
+
+
+.profile-chat{
+	background-color: #1abc9c;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 30%;
+}
+.profile-chat img{
+	border: 1px solid rgba(0,0,0,.5);
+	padding: 1em;
+	margin: 2em 0;
+  height: 300px;
+}
+.profile-chat h5{
+	font-weight: 700;
+	margin: 1.5em 0 .5em;
+}
+.chat{
+	padding-bottom: 10%;
+}
+.chat, .comment{
+	padding: 3em 2em;
+	margin-left: 30%;
+}
+.comment{
+	position: fixed;
+	bottom: 0;
+	background-color: #fff;
+	left: 30px;
+	right: 0px;
+}
+.chat-description{
+	text-align: right;
+	margin: 2em 0;
+}
+.chat-description img{
+	width: 50px;
+	margin-left: 10px; 
+	border: 1px solid #000;
+	padding: 5px;
+}
+input{
+	border: none;
+	border-bottom: 1px solid #000;
+	margin-right: 1em;
+	padding: 8px;
+	width: 70%;
+	outline: none;
+}
+button{
+	background-color: #16a085;
+	color: #fff;
+	padding: 5px 20px;
+}
+button:hover, button:focus{
+	background-color: #1abc9c;
+	color: #fff;
+	padding: 5px 20px;
+	outline: none;
+}

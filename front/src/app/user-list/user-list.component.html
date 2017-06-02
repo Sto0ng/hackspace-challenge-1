@@ -1,62 +1,23 @@
+<!--<h1>{{title}}</h1>-->
 <nav>
 	<h2>BATCH 2017</h2>
 </nav>
 <aside>
 	<h2>TEAM</h2>
 	<div class="profile">
-		<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-		<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-		<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-		<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-		<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
+		<div *ngFor="let user of users">
+			<img [src]="user.profilePicture" [alt]="user.name">
+		</div>
 	</div>
 </aside>
 <section>	
 	<div class="row profile-batch">
-		<div class="col-md-offset-1 col-md-2 text-center">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-		</div>
-		<div class="col-md-2 text-center">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-		</div>
-		<div class="col-md-2 text-center">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-		</div>
-		<div class="col-md-2 text-center">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-		</div>
-		<div class="col-md-2 text-center">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
-			<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/10299-200.png">
+		<div class="col-md-2 text-center" *ngFor="let batch of participantBatches">
+			<div *ngFor="let participant of batch">
+				<a [routerLink]="['/user', participant.id]">
+					<img [src]="participant.profilePicture" [alt]="participant.name">
+				</a>
+			</div>
 		</div>
 	</div>
 </section>

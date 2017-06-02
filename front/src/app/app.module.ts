@@ -5,12 +5,15 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { UserDescriptionComponent } from './user-list/user-description/user-description.component';
-import { UserListComponent } from './user-list/user-list.component';
+import { UserListComponent } from "./user-list/user-list.component";
+import { UserDescriptionComponent } from "./user-list/user-description/user-description.component";
+import { UserService } from "app/user.service";
+import { ParticipantService } from "app/participant.service";
 
-const routes: Routes = [
-  {path: 'detail', component: UserDescriptionComponent},
-  {path: 'list', component: UserListComponent;}
+const appRoutes: Routes = [
+  { path: 'user/:id', component: UserDescriptionComponent },
+  { path: 'user-list', component: UserListComponent },
+  { path: '', redirectTo: '/user-list', pathMatch: 'full'}
 ];
 
 @NgModule({
@@ -23,9 +26,9 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ UserService, ParticipantService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
