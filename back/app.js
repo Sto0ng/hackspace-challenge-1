@@ -1,3 +1,5 @@
+console.log("Server Corriendo");
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -13,6 +15,19 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
+//prueba------------------------------------>
+var app = require('express')();
+var http = require('http').Server(app);
+
+app.get('/', function(req, res){
+  res.sendFile("../front/src/index.html");
+});
+
+http.listen(8080, function(){
+  console.log('listening on *:8080');
+});
+
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
